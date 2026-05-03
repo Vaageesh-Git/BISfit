@@ -78,8 +78,11 @@ class LLMClient:
         Combined Layer 3 & 4: Uses the LLM to read chunks, output the final narrative response, AND extract the top IS standards in one single call.
         """
         context = ""
-        for i, chunk in enumerate(retrieved_chunks[:10]):
-            context += f"Document {i+1}:\n{chunk.get('text', '')}\n\n"
+        for i, chunk in enumerate(retrieved_chunks[:6]):
+            # Use content_only (shorter, focused) for LLM context; truncate to 600 chars to stay within token limits
+            chunk_text = chunk.get('content_only', chunk.get('text', ''))
+            chunk_text = chunk_text[:600]  # Hard cap: ~150 tokens per chunk, 6 chunks = ~900 tokens total
+            context += f"Document {i+1} [{chunk.get('standard_code', chunk.get('is_number', ''))}]:\n{chunk_text}\n\n"
             
         system_prompt = (
             "You are a BIS compliance evaluator. Your task is to answer the user's query based ONLY on the provided documents.\n"

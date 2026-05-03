@@ -1,72 +1,72 @@
 [
   {
-    "id": "PUB-01",
-    "query": "We are a small enterprise manufacturing 33 Grade Ordinary Portland Cement. Which BIS standard covers the chemical and physical requirements for our product?",
+    "id": "PVT-01",
+    "query": "We manufacture 43 Grade Ordinary Portland Cement and need to know which BIS standard specifies its physical and chemical requirements.",
     "expected_standards": [
-      "IS 269: 1989"
+      "IS 8112 : 1989"
     ]
   },
   {
-    "id": "PUB-02",
-    "query": "I need to comply with the regulations for coarse and fine aggregates derived from natural sources intended for use in structural concrete.",
+    "id": "PVT-02",
+    "query": "Our factory produces 53 Grade Ordinary Portland Cement for high-strength structural applications. What is the applicable Indian Standard?",
     "expected_standards": [
-      "IS 383: 1970"
+      "IS 12269 : 1987"
     ]
   },
   {
-    "id": "PUB-03",
-    "query": "What is the official specification for manufacturing precast concrete pipes, both with and without reinforcement, for water mains?",
+    "id": "PVT-03",
+    "query": "We are setting up production for Rapid Hardening Portland Cement for fast-track construction projects. Which standard governs its requirements?",
     "expected_standards": [
-      "IS 458: 2003"
+      "IS 8041 : 1990"
     ]
   },
   {
-    "id": "PUB-04",
-    "query": "Our company is shifting to manufacturing hollow and solid lightweight concrete masonry blocks. What standard outlines the dimensions and physical requirements?",
+    "id": "PVT-04",
+    "query": "Which Indian Standard covers Sulphate Resisting Portland Cement, particularly for use in aggressive soil and water conditions?",
     "expected_standards": [
-      "IS 2185 (Part 2): 1983"
+      "IS 12330 : 1988"
     ]
   },
   {
-    "id": "PUB-05",
-    "query": "Looking for the standard detailing corrugated and semi-corrugated asbestos cement sheets used for roofing and cladding.",
+    "id": "PVT-05",
+    "query": "We are planning to manufacture Hydrophobic Portland Cement for use in humid storage conditions. What is the relevant BIS standard?",
     "expected_standards": [
-      "IS 459: 1992"
+      "IS 8043 : 1991"
     ]
   },
   {
-    "id": "PUB-06",
-    "query": "What is the Indian Standard covering the manufacture, chemical, and physical requirements for Portland slag cement?",
+    "id": "PVT-06",
+    "query": "Our company needs to comply with specifications for High Alumina Cement intended for structural use in refractory or chemical resistant applications. Which standard applies?",
     "expected_standards": [
-      "IS 455: 1989"
+      "IS 6452 : 1989"
     ]
   },
   {
-    "id": "PUB-07",
-    "query": "We are setting up a plant to produce Portland pozzolana cement that is calcined clay based. What is the applicable standard?",
+    "id": "PVT-07",
+    "query": "We produce fly ash based Portland Pozzolana Cement. Which standard outlines the requirements for our product?",
     "expected_standards": [
-      "IS 1489 (Part 2): 1991"
+      "IS 1489 (PART1) : 1991"
     ]
   },
   {
-    "id": "PUB-08",
-    "query": "Which standard applies to masonry cement used for general purposes where mortars for masonry are required, but not intended for structural concrete?",
+    "id": "PVT-08",
+    "query": "Which BIS standard governs sand used for plastering work in construction, covering grading and deleterious material limits?",
     "expected_standards": [
-      "IS 3466: 1988"
+      "IS 1542 : 1992"
     ]
   },
   {
-    "id": "PUB-09",
-    "query": "Looking for the standard that details the composition, manufacture, and testing of supersulphated cement, particularly for marine works or aggressive water conditions.",
+    "id": "PVT-09",
+    "query": "We are manufacturing artificial lightweight aggregates for use in concrete masonry units. What is the applicable Indian Standard?",
     "expected_standards": [
-      "IS 6909: 1990"
+      "IS 9142 : 1979"
     ]
   },
   {
-    "id": "PUB-10",
-    "query": "Our company manufactures White Portland cement for architectural and decorative purposes. Which standard governs its physical and chemical requirements?",
+    "id": "PVT-10",
+    "query": "Which standard specifies requirements for sand to be used as fine aggregate in masonry mortars for construction work?",
     "expected_standards": [
-      "IS 8042: 1989"
+      "IS 2116 : 1980"
     ]
   }
 ]

@@ -61,17 +61,23 @@ class EmbedderFAISS:
         return results
 
 if __name__ == "__main__":
-    from parser import parse_pdf
-    from chunker import process_sections
-    
-    pdf_path = "../../data/dataset.pdf"
-    if os.path.exists(pdf_path):
-        sections = parse_pdf(pdf_path)
-        # Using a dummy standard code/title for now. In a real scenario, this would be inferred from the PDF name or content.
-        chunks = process_sections(sections, "BIS_STANDARDS", "BIS Document")
-        
+    json_path = "../../data/rag_chunks.json"
+    if os.path.exists(json_path):
+        with open(json_path, 'r', encoding='utf-8') as f:
+            raw_chunks = json.load(f)
+            
+        # Map the new schema to the expected RAG schema
+        processed_chunks = []
+        for chunk in raw_chunks:
+            processed_chunk = chunk.copy()
+            # Map the new keys to what the pipeline expects
+            processed_chunk['text'] = chunk.get('text_to_embed', chunk.get('content', ''))
+            processed_chunk['standard_code'] = chunk.get('is_number', '')
+            processed_chunks.append(processed_chunk)
+            
         embedder = EmbedderFAISS()
-        embedder.add_chunks(chunks)
+        embedder.add_chunks(processed_chunks)
         embedder.save("../../data/faiss_index.bin", "../../data/chunk_metadata.json")
+        logger.info("Successfully ingested optimized chunks into FAISS!")
     else:
-        print(f"File not found: {pdf_path}")
+        print(f"File not found: {json_path}")
